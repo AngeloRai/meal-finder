@@ -109,3 +109,17 @@ mealsEl.addEventListener("click", (e) => {
     getMealById(mealInfo.getAttribute("data-mealId"));
   }
 });
+
+mealsEl.addEventListener("touchstart", (e) => {
+  const mealInfo = e.path.find((item) => {
+    if (item.classList) {
+      return item.classList.contains("meal-info");
+    } else {
+      false;
+    }
+  });
+
+  if (mealInfo) {
+    getMealById(mealInfo.getAttribute("data-mealId"));
+  }
+});
