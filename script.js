@@ -26,12 +26,12 @@ function searchMeal(e) {
             .map(
               (meal) => `
         <div class="meal">
-          
+          <a href="#single-meal">
             <div class="meal-info" data-mealId="${meal.idMeal}">
               <h3>${meal.strMeal}</h3>
             </div>
             <img src="${meal.strMealThumb}" alt="meal"/>
-          
+          </a>
         </div>
     `
             )
@@ -97,6 +97,7 @@ random.addEventListener("click", () => {
 submit.addEventListener("click", searchMeal);
 
 mealsEl.addEventListener("click", (e) => {
+
   const mealInfo = e.path.find((item) => {
     if (item.classList) {
       return item.classList.contains("meal-info");
@@ -111,6 +112,7 @@ mealsEl.addEventListener("click", (e) => {
 });
 
 mealsEl.addEventListener("touch", (e) => {
+
   const mealInfo = e.path.find((item) => {
     if (item.classList) {
       return item.classList.contains("meal-info");
