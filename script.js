@@ -111,7 +111,7 @@ mealsEl.addEventListener("click", (e) => {
   }
 });
 
-mealsEl.addEventListener("touchstart", (e) => {
+mealsEl.addEventListener("touch", (e) => {
 
   const mealInfo = e.path.find((item) => {
     if (item.classList) {
