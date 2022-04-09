@@ -10,7 +10,7 @@ function searchMeal(e) {
   e.preventDefault();
 
   single_mealEl.innerHTML = "";
-  instruction.style.display = 'none'
+  instruction.style.display = "none";
   const term = search.value;
 
   if (term.trim()) {
@@ -26,8 +26,12 @@ function searchMeal(e) {
             .map(
               (meal) => `
         <div class="meal">
-        <div class="meal-info" data-mealId="${meal.idMeal}"><h3>${meal.strMeal}</h3></div>
-        <img src="${meal.strMealThumb}" alt="meal"/>
+          <a href="#single-meal">
+            <div class="meal-info" data-mealId="${meal.idMeal}">
+              <h3>${meal.strMeal}</h3>
+            </div>
+            <img src="${meal.strMealThumb}" alt="meal"/>
+          </a>
         </div>
     `
             )
@@ -85,7 +89,7 @@ random.addEventListener("click", () => {
     .then((data) => {
       resultHeading.innerHTML = "";
       mealsEl.innerHTML = "";
-      instruction.style.display = 'none'
+      instruction.style.display = "none";
       addMealToDOM(data.meals[0]);
     });
 });

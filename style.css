@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #2d2013;
   color: #fff;
@@ -53,12 +57,12 @@ input[type="text"] {
 }
 
 .instruction {
-    display: block;
+  display: block;
 }
 
 .instruction img {
-    width: 100%;
-    padding: 20px;
+  width: 100%;
+  padding: 20px;
 }
 
 .meals {
@@ -104,6 +108,7 @@ input[type="text"] {
 .single-meal {
   margin: 30px auto;
   width: 70%;
+  min-height: 400px;
 }
 
 .single-meal img {
