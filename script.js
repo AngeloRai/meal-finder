@@ -1,15 +1,16 @@
 const search = document.getElementById("search");
-const submit = document.getElementById("submit");
+const submit = document.getElementById("submit-btn");
 const random = document.getElementById("random");
 const mealsEl = document.getElementById("meals");
 const resultHeading = document.getElementById("result-heading");
 const single_mealEl = document.getElementById("single-meal");
+const instruction = document.getElementById("instruction");
 
 function searchMeal(e) {
   e.preventDefault();
 
   single_mealEl.innerHTML = "";
-
+  instruction.style.display = 'none'
   const term = search.value;
 
   if (term.trim()) {
@@ -84,6 +85,7 @@ random.addEventListener("click", () => {
     .then((data) => {
       resultHeading.innerHTML = "";
       mealsEl.innerHTML = "";
+      instruction.style.display = 'none'
       addMealToDOM(data.meals[0]);
     });
 });

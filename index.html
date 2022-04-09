@@ -16,20 +16,30 @@
   </head>
   <body>
     <div class="container">
-        <h1>Meal Finder</h1>
-        <div class="flex">
-            <form class="flex" id="submit">
-                <input type="text" id="search" placeholder="Search for meals or keywords">
-                <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
-
-            </form>
-            <button class="random-btn" id="random"><i class="fas fa-random"></i></button>
-        </div>
-        <div id="result-heading"></div>
-        <div id="meals" class="meals"></div>
-        <div id="single-meal"></div>
+      <h1>Meal Finder</h1>
+      <div class="flex">
+        <form class="flex" id="submit">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search for meals or keywords"
+          />
+          <button class="search-btn" type="submit" id="submit-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <button class="random-btn" id="random">
+          <i class="fas fa-random"></i>
+        </button>
+      </div>
+      <div class="instruction" id="instruction">
+        <h2>Find a meal by searching a term or clciking random button.</h2>
+        <img src="./img/home-food-photo.webp" alt="food">
+      </div>
+      <div id="result-heading"></div>
+      <div id="meals" class="meals"></div>
+      <div id="single-meal"></div>
     </div>
-
 
     <script src="script.js"></script>
   </body>

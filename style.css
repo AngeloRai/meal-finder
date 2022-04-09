@@ -52,6 +52,15 @@ input[type="text"] {
   border-bottom-right-radius: 4px;
 }
 
+.instruction {
+    display: block;
+}
+
+.instruction img {
+    width: 100%;
+    padding: 20px;
+}
+
 .meals {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
