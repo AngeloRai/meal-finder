@@ -111,18 +111,18 @@ mealsEl.addEventListener("touchend", (e) => {
   }
 });
 
-mealsEl.addEventListener("click", (e) => {
-  e.stopPropagation();
+// mealsEl.addEventListener("click", (e) => {
+//   e.stopPropagation();
 
-  const mealInfo = e.path.find((item) => {
-    if (item.classList) {
-      return item.classList.contains("meal-info");
-    } else {
-      false;
-    }
-  });
+//   const mealInfo = e.path.find((item) => {
+//     if (item.classList) {
+//       return item.classList.contains("meal-info");
+//     } else {
+//       false;
+//     }
+//   });
 
-  if (mealInfo) {
-    getMealById(mealInfo.getAttribute("data-mealId"));
-  }
-});
+//   if (mealInfo) {
+//     getMealById(mealInfo.getAttribute("data-mealId"));
+//   }
+// });
