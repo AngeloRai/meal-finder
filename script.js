@@ -96,24 +96,21 @@ random.addEventListener("click", () => {
 
 submit.addEventListener("click", searchMeal);
 
-// mealsEl.addEventListener("click", (e) => {
+mealsEl.addEventListener("touchend", (e) => {
+  const mealInfo = e.path.find((item) => {
+    if (item.classList) {
+      return item.classList.contains("meal-info");
+    } else {
+      false;
+    }
+  });
 
-//   const mealInfo = e.path.find((item) => {
-//     if (item.classList) {
-//       return item.classList.contains("meal-info");
-//     } else {
-//       false;
-//     }
-//   });
-
-//   if (mealInfo) {
-//     getMealById(mealInfo.getAttribute("data-mealId"));
-//   }
-// });
+  if (mealInfo) {
+    getMealById(mealInfo.getAttribute("data-mealId"));
+  }
+});
 
 mealsEl.addEventListener("click", (e) => {
-
-
   const mealInfo = e.path.find((item) => {
     if (item.classList) {
       return item.classList.contains("meal-info");
