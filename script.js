@@ -97,6 +97,7 @@ random.addEventListener("click", () => {
 submit.addEventListener("click", searchMeal);
 
 mealsEl.addEventListener("touchend", (e) => {
+  e.stopPropagation();
   const mealInfo = e.path.find((item) => {
     if (item.classList) {
       return item.classList.contains("meal-info");
@@ -111,6 +112,8 @@ mealsEl.addEventListener("touchend", (e) => {
 });
 
 mealsEl.addEventListener("click", (e) => {
+  e.stopPropagation();
+
   const mealInfo = e.path.find((item) => {
     if (item.classList) {
       return item.classList.contains("meal-info");
