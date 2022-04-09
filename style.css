@@ -111,6 +111,12 @@ input[type="text"] {
   min-height: 400px;
 }
 
+.meals a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+
 .single-meal img {
   width: 300px;
   margin: 15px;
